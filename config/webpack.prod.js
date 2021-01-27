@@ -3,7 +3,7 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 const commonConfig = require('./webpack.common');
 const packageJson = require('../package.json');
 
-const domain = process.env.PRODUCTION_DOMAIN;
+//const domain = process.env.PRODUCTION_DOMAIN;
 
 const prodConfig = {
   mode: 'production',
@@ -15,11 +15,16 @@ const prodConfig = {
     new ModuleFederationPlugin({
       name: 'container',
       remotes: {
-        customer: `customer@${domain}/customer/latest/remoteEntry.js`,
-        legal: `legal@${domain}/legal/latest/remoteEntry.js`,
-        marketing: `marketing@${domain}/marketing/latest/remoteEntry.js`,
-        purchase: `purchase@${domain}/purchase/latest/remoteEntry.js`,
-        product: `product@${domain}/product/latest/remoteEntry.js`,
+        //customer: `customer@${domain}/customer/latest/remoteEntry.js`,
+        //legal: `legal@${domain}/legal/latest/remoteEntry.js`,
+        //marketing: `marketing@${domain}/marketing/latest/remoteEntry.js`,
+        //purchase: `purchase@${domain}/purchase/latest/remoteEntry.js`,
+        //product: `product@${domain}/product/latest/remoteEntry.js`,
+        customer: `customer@/customer/latest/remoteEntry.js`,
+        legal: `legal@/legal/latest/remoteEntry.js`,
+        marketing: `marketing@/marketing/latest/remoteEntry.js`,
+        purchase: `purchase@/purchase/latest/remoteEntry.js`,
+        product: `product@/product/latest/remoteEntry.js`,
       },
       shared: packageJson.dependencies,
     }),
