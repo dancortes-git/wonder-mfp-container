@@ -1,4 +1,4 @@
-# Wonder - MFP
+# Wonder - MFP - Micro Frontend Container
 
 This project is a Micro Frontend build with React SPA and Webpack Module Federation. It is used as a container application.
 
